@@ -48,8 +48,7 @@ We have divided the code in the following 5 parts to maintain modularity and enh
 - Clears shared memory segment
 - Calculates and prints total execution time of program
 
- 
-### 2. Producer
+ ### 2. Producer
 Function -> int insert_job(JOB job, SMT *shmseg)
 - Takes shared memory segment and new job as input
 - Returns -1 if queue is full
@@ -111,6 +110,8 @@ Function -> SMT *create_SHM(int *shm_id);
 Function -> int create_semaphore_set(); 
 - Creates FULL and EMPTY semaphores
  
+ 
+ 
 ## Part 2: Implement a producer / consumer set of threads using shared memory
 ## Data Structures
  - SAME AS PART 1 
