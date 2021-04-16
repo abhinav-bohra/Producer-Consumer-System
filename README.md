@@ -4,6 +4,7 @@ Producer consumer problem is a classical synchronization problem. I have solved 
 
 ## Part 1: Implement a producer / consumer set of processes using shared memory
 Data Structures
+```
 typedef struct Job {
     int producer_pid;           // Producer process_id
     int producer_no;            // Producer Number
@@ -24,7 +25,7 @@ typedef struct SHMSegment {
     int job_created;				//counter of number of jobs created
     int job_completed;			//counter of number of jobs completed
 } SMT;
-
+```
 
 ## Algorithms and User-Defined Functions
 We have divided the code in the following 5 parts to maintain modularity and enhance understandability of the code: -
@@ -127,22 +128,22 @@ Function -> int create_semaphore_set();
 ### 2. Producer
 
 Function -> int insert_job(JOB job, SMT *shmseg)
-* SAME AS PART 1 *
+- SAME AS PART 1 
 Function -> JOB produce_job(int producer_no) 
-* SAME AS PART 1 *
+- SAME AS PART 1 
 Function -> void* producer_main(void* argv)
 - The arguments int i, int NJ a recovered from void* argv
 - Everything else is same as in Part 1
 
 ### 3. Consumer
 Function -> JOB remove_job(int consumer_no, SMT* shmseg)
-* SAME AS PART 1 *
+- SAME AS PART 1 
 Function -> void* consumer_main(void* argv)
 - The arguments int i, int NJ a recovered from void* argv
 - Everything else is same as in Part 1
 
 ### 4. Queue
-* SAME AS PART 1 *
+- SAME AS PART 1 
 
 ### 5. Shared Memory
 - The function SMT* create_SHM(int* shm_id) is removed, since there is no need to explicitly share memory between threads as they share common address space
