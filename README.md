@@ -21,9 +21,9 @@ struct priority_queue {
 
 
 typedef struct SHMSegment {
-    struct priority_queue job_queue;            //priority queue of 8 elements
-    int job_created;            //counter of number of jobs created
-    int job_completed;          //counter of number of jobs completed
+    struct priority_queue job_queue;        //priority queue of 8 elements
+    int job_created;                        //counter of number of jobs created
+    int job_completed;                      //counter of number of jobs completed
 } SMT;
 ```
 
