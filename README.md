@@ -3,7 +3,7 @@ Implementation of multiple producer-consumer system where producers create prior
 Producer consumer problem is a classical synchronization problem. I have solved this problem by using semaphores.
 
 ## Part 1: Implement a producer / consumer set of processes using shared memory
-Data Structures
+### Data Structures
 ```
 typedef struct Job {
     int producer_pid;           // Producer process_id
@@ -96,6 +96,7 @@ We have implemented a priority queue using the following functions: -
 
 ### 5. Shared Memory
 To avoid race condition, we have used semaphores to lock the critical section of program, i.e., whenever the shared memory segment is accessed by a process.
+
 Function -> int init_SHM(SMT* shmseg);
 - Initialises Shared Memory Segment varaibles as 
 - shmseg->job_completed = 0;
